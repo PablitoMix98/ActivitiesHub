@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventsHub.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260909031520_InitialCreate")]
+    [Migration("20260828131904_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace EventsHub.Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.11");
 
-            modelBuilder.Entity("EventsHub.Domain.Activity", b =>
+            modelBuilder.Entity("EventsHub.Domain.Event", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
@@ -61,7 +61,7 @@ namespace EventsHub.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Activities");
+                    b.ToTable("Events");
                 });
 #pragma warning restore 612, 618
         }
